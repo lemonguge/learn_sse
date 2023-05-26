@@ -45,7 +45,6 @@ public class HttpController {
                 emitter.completeWithError(e); // 发送错误信息
             } finally {
                 emitter.complete(); // 关闭 SSEEmitter 对象
-                executor.shutdown(); // 关闭线程池
             }
         });
 
