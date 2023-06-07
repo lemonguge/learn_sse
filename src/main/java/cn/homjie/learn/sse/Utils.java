@@ -51,8 +51,9 @@ public class Utils {
                 }
                 c.addAll(c2);
             });
-        return c.stream().filter(Segment::isNotEmpty)
-            .sorted().map(e -> new SimpleEntry<>(e.key, e.str))
+        return c.stream()
+            .filter(Segment::isNotEmpty).sorted()
+            .map(e -> new SimpleEntry<>(e.key, e.str))
             .collect(Collectors.toList());
     }
 
